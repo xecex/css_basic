@@ -1,0 +1,32 @@
+/* 外部スタイルシートはindex.htmlの外部にcssを書いて、それを読み込んでいく方法（1番使われている）*/
+div {
+    color: blue;
+
+    /* 1rem = 16px */
+
+    font-size: 3rem;
+
+    /* background-colorにはヘックス値やRGB値がよく使われる */
+    /* カラーピッカーが便利 */
+
+    background-color: rgb(252, 86, 210);
+
+    /* 横幅の設定。デフォルトが100% */
+    /* calcを利用すると計算式で横幅の設定ができる */
+
+    width: calc(100% / 3);
+
+    /* marginは余白を空けるためのプロパティ */
+
+    /*
+      margin-top: 100px;
+      margin-left: 100px;
+      margin-bottom: 100px;
+      margin-right: 0;
+    */
+
+    /* ショートハンドで余白を作る方法 */
+    /* 上、右、下、左の順番 */
+
+    margin: 100px 0 50px 100px;
+}

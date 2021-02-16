@@ -1,0 +1,85 @@
+/* カスケードはcssの順序 */
+/* 同じ宣言の場合、後のほうが優先される */
+/* スタイリング（詳細度）の優先順位 →「 !important > インラインスタイル > id > class > 要素セレクター 」*/
+
+/* id */
+
+#title {
+    color: red;
+}
+
+/* class */
+
+.a {
+    color: blue;
+}
+
+/* 要素セレクター */
+
+h1 {
+    color: green;
+}
+
+/* !important */
+/* 絶対に必要な場合を除いて、あまり使用しない方がよい（あくまでも最終手段）*/
+
+h1 {
+    color: grey !important;
+}
+
+/*
+
+・カスケードの順番
+・同じ宣言をしたとしても数字の大きい方から優先される
+・「!important」を使うと無理やりcssをあてることができる（あまり推奨されていない）
+・基本的に1～3を覚えてけばよい
+
+  origin - importance
+1 user agent（ブラウザが当てているデフォルトのスタイル）- normal
+2 user（ブラウザを使っているユーザー）- normal
+3 author（開発者）- normal
+4 animations（cssのアニメーション）
+5 author - !important
+6 user - !important
+7 user agent - !important
+8 transitions（アニメーションの細かい設定）
+
+*/
+
+/* 継承 */
+/* inherit、initial、unsetはどのプロパティも持っている値（ユニバーサルプロパティ値と呼ぶ）*/
+
+li {
+    color: red;
+}
+
+/* 親要素から値を引き継ぐ */
+
+li a[href*='google'] {
+    color: inherit;
+}
+
+/* ブラウザが持っているデフォルト値をその要素に適応させる（今回の場合だと黒色になる）*/
+
+li a[href*='youtube'] {
+    color: initial;
+}
+
+/* unsetはinheritとinitialの組み合わせのようなもので、inheritがある場合はinherit、inheritがない場合はinitialが適用される */
+
+li a[href*='apple'] {
+    color: unset;
+}
+
+/* 全てのプロパティ値のリセット（all:unset）*/
+
+div {
+    background-color: orange;
+    border: 3px solid black;
+}
+
+/* "all: unset;"で全てのcssをリセット */
+
+.fix {
+    all: unset;
+}

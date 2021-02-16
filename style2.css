@@ -1,0 +1,134 @@
+h1 {
+    background-color: pink;
+}
+
+/* 擬似クラス（hover）属性はマウスのカーソルがホバーした時にスタイリングをあてるもの */
+/* hoverも:not属性で否定することができる */
+
+p:hover {
+    background-color: rgb(98, 243, 69);
+}
+
+/* bodyタグにbackground-colorを使用するとサイト全体の背景色を指定することができる */
+
+body {
+    background-color: gray;
+}
+
+/* classのスタイル指定は「.」から始まる */
+/* classは複数つけることができる */
+/* 「.title.big」のようにセレクターのほうで複数組み合わせることも可能 */
+
+.title {
+    background-color: rgb(95, 238, 243);
+}
+
+.big {
+    font-size: 5rem;
+}
+
+/* idセレクターは「#」から始まる */
+/* 複数持ちはNG。1つだけ */
+/* 空白文字を入れるのはNG */
+
+/* 基本的にはidではなく、classを使用する!! */
+
+#a {
+    background-color: red;
+}
+
+/* ユニバーサルセレクター（* {}）は全ての要素に影響を与える */
+
+/*
+article * {
+    color: white;
+}
+*/
+
+/* 属性によるセレクター */
+/* aタグでhref属性を持っているものに対してスタイルを適用する */
+
+a[href] {
+    color: yellowgreen;
+}
+
+/* 部分文字列一致セレクター（全文一致）*/
+
+a[href="https://www.google.co.jp"] {
+    color: white;
+}
+
+/* 部分文字列一致セレクター（前方一致）*/
+
+a[href^="https://www.yahoo"] {
+    color: orange;
+}
+
+/* 部分文字列一致セレクター（部分一致）*/
+
+a[href*="google.com"] {
+    color: blue;
+}
+
+/* 部分文字列一致セレクター（後方一致）*/
+
+a[href$='apple.com'] {
+    color: brown;
+}
+
+/* 擬似クラスおよび擬似要素によるセレクター */
+/* first-of-typeはpタグの最初のものにスタイルを適用する*/
+/* first-childはh1も含めた最初のものにスタイルを適用するため注意 */
+/* first-of-typeのほうがよく使われる */
+
+article p:first-of-type {
+    color: red;
+}
+
+/* last-of-typeなどもある */
+
+article p:last-of-type {
+    color: blue;
+}
+
+/* nth-of-typeなどもある。好きな順番を指定できる */
+/* 4番目を指定 */
+
+article p:nth-of-type(4) {
+    color: cyan;
+}
+
+/* 擬似クラス（:not）で否定表現ができる */
+
+/*
+一番最初以外のpタグを赤くする
+
+article p:not(:first-of-type) {
+    color: red;
+}
+*/
+
+/* 擬似要素（::after、::before） */
+/* h1タグの後ろに★マークを追加する */
+
+h1::after {
+    content: '★';
+}
+
+/* ::first-lineは最初の行に対してのみスタイリングをかける */
+/* ::first-letterは最初の文字に対してのみスタイリングをかける */
+
+p::first-line {
+    color: white;
+}
+
+/*
+4種類の結合子
+
+descendant combinator（子孫結合子）
+child combinator（子結合子）
+adjacent sibling combinator（隣接兄弟結合子）
+general sibling combinator（一般兄弟結合子）
+
+が存在する
+*/

@@ -1,0 +1,82 @@
+.container {
+    width: 1000px;
+    background-color: red;
+    display: flex;
+}
+
+.item {
+    height: 200px;
+}
+
+/* flexプロパティを使用すると、containerに対して中のitemの比率を設定できる（習得必須）*/
+/* 3:2に設定 */
+
+/* flex-growは残りの幅をどのように配分するかという設定 */
+/* flex-shrinkはオーバーした分をどのように縮めるかという設定 */
+/* flex-basisはどれくらいの割合を保持するかという設定 */
+
+.item1 {
+    background-color: pink;
+    flex: 3;
+}
+
+.item2 {
+    background-color: skyblue;
+    flex: 2;
+}
+
+.measure {
+    display: flex;
+    width: 1000px;
+}
+
+.measure div {
+    width: 100px;
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: right;
+}
+
+.measure div + div {
+    border-left: 1px solid black;
+}
+
+.measure div:nth-of-type(1) {
+    background-color: #00ff00;
+}
+
+.measure div:nth-of-type(2) {
+    background-color: #00ff00;
+}
+
+.measure div:nth-of-type(3) {
+    background-color: #00ff00;
+}
+
+.measure div:nth-of-type(4) {
+    background-color: #00ee00;
+}
+
+.measure div:nth-of-type(5) {
+    background-color: #00dd00;
+}
+
+.measure div:nth-of-type(6) {
+    background-color: #00cc00;
+}
+
+.measure div:nth-of-type(7) {
+    background-color: #00bb00;
+}
+
+.measure div:nth-of-type(8) {
+    background-color: #00aa00;
+}
+
+.measure div:nth-of-type(9) {
+    background-color: #009900;
+}
+
+.measure div:nth-of-type(10) {
+    background-color: #008800;
+}

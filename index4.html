@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index4</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body style="margin: 0">
+    <div class="normal">ノーマルスタイルブロック</div>
+    <div class="box">ボックススタイルブロック</div>
+    <div class="margin">マージン相殺の説明用のブロック</div>
+
+    <!-- divタグは改行して表示されている -->
+    <!-- div（ブロック）タグはwidth、heightが適用される -->
+
+    <div>私はブロックです</div>
+    <div>私はブロックです</div>
+    <div>私はブロックです</div>
+
+    <hr>
+
+    <!-- spanタグは改行されずに続いて表示されている -->
+    <!-- span（インライン）タグはwidth、heightが適用されない -->
+
+    <span>私はインラインです</span>
+    <span>私はインラインです</span>
+    <span>私はインラインです</span>
+
+    <hr>
+
+    <div class="example">ブロック内の<span>インライン</span>です。インラインの場合はmargin、padding、borderがきた時に他の要素のことを考えません。</div>
+
+    <hr>
+
+    <div class="example">ブロック内の<div>ブロック</div>です。ブロックの場合はmargin、padding、borderがきた時に他の要素のことも考えます。</div>
+
+</body>
+</html>
